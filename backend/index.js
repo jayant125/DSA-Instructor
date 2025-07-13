@@ -5,20 +5,15 @@ require("dotenv").config();
 
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
-
-// Serve static frontend build
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-const PORT = process.env.PORT || 5000;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const MODEL_NAME = "gemini-1.5-flash";
 
 const SYSTEM_INSTRUCTION = "You are a helpful and knowledgeable coding instructor. Answer clearly and concisely.";
 
-// POST API endpoint
 app.post("/api/ask", async (req, res) => {
     const { question } = req.body;
     if (!question) return res.status(400).json({ error: "Question is required" });
@@ -48,22 +43,9 @@ app.post("/api/ask", async (req, res) => {
     }
 });
 
-// SPA fallback route (must be last)
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
-app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+module.exports = app;  // ✅ export for Vercel
 
-// SPA fallback route (must be last)
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
-});
-
-// Don't listen here — Vercel invokes the handler
-module.exports = app;
-
-// Don't listen here — Vercel invokes the handler
-if (require.main === module) {
-    app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
-}
