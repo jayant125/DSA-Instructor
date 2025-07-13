@@ -12,5 +12,16 @@
       "dest": "backend/index.js"
     }
   ],
-  "buildCommand": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend"
+  "buildCommand": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:;"
+        }
+      ]
+    }
+  ]
 }
