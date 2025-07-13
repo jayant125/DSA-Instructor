@@ -19,7 +19,7 @@ export default function App() {
         {/* Main content area */}
         <div className="flex-1 overflow-y-auto p-4">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Dashboard></Dashboard>} />
             <Route path="/dashboard" element={<div className="text-xl"><Dashboard></Dashboard></div>} />
             <Route path="/history" element={<div className="text-xl">📜 History</div>} />
             <Route path="/tutorial" element={<div className="text-xl"><Tutorial></Tutorial></div>} />
