@@ -63,3 +63,7 @@ app.get('*', (req, res) => {
 // Don't listen here — Vercel invokes the handler
 module.exports = app;
 
+// Don't listen here — Vercel invokes the handler
+if (require.main === module) {
+    app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+}
