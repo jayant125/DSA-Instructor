@@ -25,7 +25,7 @@ export default function Sidebar() {
                     isOpen ? "translate-x-0" : "-translate-x-full"
                 } lg:translate-x-0 lg:relative z-40`}
             >
-                <div className="flex flex-col justify-between h-full">
+                <div className="flex flex-col justify-between h-full ">
                     {/* Top section */}
                     <div>
                         {/* Logo */}
@@ -44,7 +44,7 @@ export default function Sidebar() {
                         <nav className="px-4 flex flex-col gap-2 mt-4">
                             {/* Dashboard */}
                             <button
-                                className="flex items-center gap-3 p-3 rounded hover:bg-green-600/70 bg-green-500/80"
+                                className="flex items-center gap-3 p-3 rounded cursor-pointer hover:bg-blue-300 bg-green-300/80"
                                 onClick={() => handleNavigation("/dashboard")}
                             >
                                 📊 Dashboard
@@ -52,7 +52,7 @@ export default function Sidebar() {
 
                             {/* History */}
                             <button
-                                className="flex items-center gap-3 p-3 rounded hover:bg-green-600/70 bg-green-500/80"
+                                className="flex items-center gap-3 p-3 rounded cursor-pointer hover:bg-blue-300 bg-green-300/80"
                                 onClick={() => handleNavigation("/history")}
                             >
                                 📜 History
@@ -60,7 +60,7 @@ export default function Sidebar() {
 
                             {/* Tutorial */}
                             <button
-                                className="flex items-center gap-3 p-3 rounded hover:bg-green-600/70 bg-green-500/80"
+                                className="flex items-center gap-3 p-3 rounded cursor-pointer hover:bg-blue-300 bg-green-300/80"
                                 onClick={() => handleNavigation("/tutorial")}
                             >
                                 🎓 Tutorial
@@ -68,7 +68,7 @@ export default function Sidebar() {
 
                             {/* Settings */}
                             <button
-                                className="flex items-center gap-3 p-3 rounded hover:bg-green-600/70 bg-green-500/80"
+                                className="flex items-center gap-3 p-3 rounded cursor-pointer hover:bg-blue-300 bg-green-300/80"
                                 onClick={() => handleNavigation("/settings")}
                             >
                                 ⚙️ Settings

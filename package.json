@@ -20,9 +20,12 @@
   "homepage": "https://github.com/jayant125/DSA-Instructor#readme",
   "dependencies": {
     "@google/genai": "^1.9.0",
+    "chart.js": "^4.5.0",
     "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
+    "react-chartjs-2": "^5.3.0",
     "readline-sync": "^1.4.10",
     "routes": "^2.1.0"
   },
