@@ -19,15 +19,12 @@
       "dest": "backend/index.js"
     },
     {
-      "src": "/(.*\\.\\w+)$",
-      "dest": "/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "frontend/dist/index.html"
     }
   ]
 }
+
 
 
 
