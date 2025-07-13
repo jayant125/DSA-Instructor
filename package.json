@@ -1,0 +1,33 @@
+{
+  "name": "dsa-instructor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dsa.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm start --prefix backend\" \"npm run dev --prefix frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayant125/DSA-Instructor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayant125/DSA-Instructor/issues"
+  },
+  "homepage": "https://github.com/jayant125/DSA-Instructor#readme",
+  "dependencies": {
+    "@google/genai": "^1.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "readline-sync": "^1.4.10",
+    "routes": "^2.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10"
+  }
+}
